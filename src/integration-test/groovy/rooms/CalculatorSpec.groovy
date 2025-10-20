@@ -25,7 +25,7 @@ class CalculatorSpec extends GebSpec {
 
         then: "Result Page is displayed"
             title == "Calculated Grade"
-//            $("output").text() == "4.0"
+            $("output").text() == "4.0"
 
 
         when: "click on back link"
