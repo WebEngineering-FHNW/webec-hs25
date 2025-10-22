@@ -6,8 +6,8 @@ class Room {
     String  typeOfRoom
 
     static constraints = {
-        name       nullable:false, blank:false
-        typeOfRoom inList:["meeting","seminar","office"]
-        capacity   nullable:true
+        name nullable:false,blank:false
+        typeOfRoom inList: ["meeting","seminar","office"]
+        capacity nullable: true
     }
 }
