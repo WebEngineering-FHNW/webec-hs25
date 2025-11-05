@@ -29,6 +29,7 @@ class BootStrap {
 
         save(new Booking(bookingDay: today, timeslot: Booking.AM,  booker: einstein, room: xxx))
         save(new Booking(bookingDay: today, timeslot: Booking.PM1, booker: roger,    room: xxx))
+        save(new Booking(bookingDay: today, timeslot: Booking.PM2, booker: roger,    room: yyy))
     }
 
     def destroy = {
