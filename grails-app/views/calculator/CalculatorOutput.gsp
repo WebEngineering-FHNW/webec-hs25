@@ -7,7 +7,13 @@
 </head>
 <body>
 
-<p> Your grade is <output>${ result }</output>.</p>
+<p> Your grade is
+  <rooms:decorate grade="${ result }">
+      <output>${ result }</output>
+  </rooms:decorate>.
+</p>
+
+
 
 <p> Back to the <a href="${createLink(action: 'index')}">calculator</a> .</p>
 
