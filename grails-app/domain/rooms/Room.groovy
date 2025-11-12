@@ -2,6 +2,7 @@ package rooms
 
 class Room {
     String  name
+    /** how many people fit into that room */
     Integer capacity
     String  typeOfRoom
 
@@ -15,7 +16,7 @@ class Room {
     static final ROOM_TYPES = [MEETING, SEMINAR, OFFICE]
 
     static constraints = {
-        name       nullable:false,blank:false
+        name       nullable:false, blank:false
         typeOfRoom inList: ROOM_TYPES
         capacity   nullable: true
     }
