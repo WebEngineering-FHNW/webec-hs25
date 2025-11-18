@@ -35,18 +35,18 @@ class BootStrap {
         assert SecUserSecRole.count()   == 2
 
 
-        Person einstein = save(new Person(firstName: "Albert", lastName: "Einstein", yearOfBirth: 1870))
+        Person einstein = save(new Person(firstName: "Albert", lastName: "Einstein", yearOfBirth: 1870, secUser: testUser))
         Person roger    = save(new Person(firstName: "Roger",  lastName: "Federer",  yearOfBirth: 1975))
 
-        Room xxx = save(new Room(name: "5.2B51", capacity: 42, typeOfRoom: Room.MEETING))
+        Room b51 = save(new Room(name: "5.2B51", capacity: 42, typeOfRoom: Room.MEETING))
         Room yyy = save(new Room(name: "5.2B53", capacity: 38, typeOfRoom: Room.SEMINAR))
 
-        1000.times { n ->
+        100.times { n ->
             save(new Room(name: "5.2B"+n, capacity: n, typeOfRoom: Room.OFFICE))
         }
 
-        save(new Booking(bookingDay: today, timeslot: Booking.AM,  booker: einstein, room: xxx))
-        save(new Booking(bookingDay: today, timeslot: Booking.PM1, booker: roger,    room: xxx))
+        save(new Booking(bookingDay: today, timeslot: Booking.AM,  booker: einstein, room: b51))
+        save(new Booking(bookingDay: today, timeslot: Booking.PM1, booker: roger,    room: b51))
         save(new Booking(bookingDay: today, timeslot: Booking.PM2, booker: roger,    room: yyy))
     }
 

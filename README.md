@@ -30,4 +30,10 @@
 
 - [https://www.gebish.org/manual/current/](https://www.gebish.org/manual/current/)
 
+## internal
+
+If integration testing runs into issues with missing
+drivers, exclude those from the build with "-x" like
+
+        ./gradlew integrationTest -Dgeb.env=htmlUnit -x:configureChromeDriverBinary -x:configureEdgeDriverBinary -x:configureGeckoDriverBinary
 
